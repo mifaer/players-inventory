@@ -30,17 +30,73 @@ main {
     margin: auto;
 }
 
-.red {
-    color: red;
+.game-inventory {
+    display: flex;
+    justify-content: center;
 }
-
-.flex {
-    width: 100%;
+.inventory {
+    width: 467px;
+    height: 435px;
+    background: url(../img/inventory.jpg) no-repeat;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.attributes {
+    width: 166px;
+    height: 370px;
+    border: 1px dotted green;
+    position: absolute;
+    left: 20px;
+    top: 50px;
+}
+.values {
+    width: 154px;
+    height: 310px;
+    padding: 5px;
+    border: 1px dotted blue;
+    color: gold;
+    background-color: #362416;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+.values div {
+    align-self: inherit;
+}
+.title {
+    align-self: center;
+}
+.values button {
+    border: 1px dotted gold;
+}
+.value{
+    border: 1px dotted green;
+}
+.corpus {
+    width: 260px;
+    height: 370px;
+    border: 1px dotted red;
+    position: absolute;
+    left: 186px;
+    top: 50px;
+}
+.backpack {
+    width: 270px;
+    height: 540px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-start;
+}
+.backpack .cell {
+    width: 54px;
+    height: 54px;
+    background: url(../img/icons.jpg) repeat;
+    background-position: -162px -540px;
 }
 
-.todo-list {
-    width: 100%;
+.cell.background {
+
 }

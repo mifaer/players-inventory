@@ -1,15 +1,35 @@
 <header>
-    <img src="img/angular.svg" />
     <h1>{{ title }}</h1>
 </header>
 
 <main>
-    <section class="todo-list">
-        <div [ngClass]="{'flex':true}" class="todo-item" *ngFor="let todo of todoList">
-            <input [ngClass]="['checkbox']" type="checkbox" [checked]="todo.state"/>
-            <span [ngClass]="['red']">{{ todo.title }}</span>
-            <span>{{ todo.date | date: 'medium' }}</span>
-            <button [ngClass]="['delete']" (click)="deleteTodo(todo)">Delete</button>
+    <!--<section class="todo-list">-->
+        <!--<div [ngClass]="{'flex':true}" class="todo-item" *ngFor="let todo of todoList">-->
+            <!--<input [ngClass]="['checkbox']" type="checkbox" [checked]="todo.state"/>-->
+            <!--<span [ngClass]="['red']">{{ todo.title }}</span>-->
+            <!--<span>{{ todo.date | date: 'medium' }}</span>-->
+            <!--<button [ngClass]="['delete']" (click)="deleteTodo(todo)">Delete</button>-->
+        <!--</div>-->
+    <!--</section>-->
+    <div class="game-inventory">
+        <div class="inventory">
+            <div class="attributes">
+                <div class="values">
+                    <div class="title">ATTRIBUTES</div>
+                    <div>Strenght: {{attributes.strenght}}</div>
+                    <div>Dexterity: {{attributes.dexterity}}</div>
+                    <div>Intelligence: {{attributes.intelligence}}</div>
+                    <div>Vitality: {{attributes.vitality}}</div>
+                    <div></div>
+                    <div>Armor: {{attributes.armor}}</div>
+                    <div>Damage: {{attributes.damage}}</div>
+                    <button class="box" (click)="openBox()">BACKPACK</button>
+                </div>
+            </div>
+            <div class="corpus"></div>
         </div>
-    </section>
+        <div class="backpack">
+            <span class="cell" draggable="true" [style.backgroundPosition]="item.position" *ngFor="let item of backpack"></span>
+        </div>
+    </div>
 </main>
